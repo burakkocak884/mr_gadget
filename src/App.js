@@ -6,6 +6,7 @@ import Calculator from './components/Calculator'
 import Welcome from './components/Welcome'
 function App() {
   return (
+    <div>
    
      
         <div className='navbar'>Home
@@ -16,11 +17,10 @@ function App() {
           <li><a href='' className='fa fa-twitter'></a></li>
           <li><a href='' className='fa fa-linkedin'></a></li>
           <li><a href='' className='fa fa-github'></a></li>
-          <li><a href='' className='fa fa-calculator'></a></li>
-          <li><a href='' className='fa fa-facebook'></a></li>
-          <li><a href='' className='fa fa-twitter'></a></li>
-          <li><a href='' className='fa fa-linkedin'></a></li>
-          <li><a href='' className='fa fa-github'></a></li>
+          <li><a href='' className='fa fa-calendar'></a></li>
+          <li><a href='' className='fa fa-email'></a></li>
+          <li><a href='' className='fa fa-flag'></a></li>
+          
 
           </ul>
        
@@ -28,6 +28,7 @@ function App() {
       
     
       
+      </div>
       </div>
      
   );

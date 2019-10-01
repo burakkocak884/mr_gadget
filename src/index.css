@@ -56,10 +56,10 @@ body {
   height: 45px;
   line-height: 45px;
   border-radius: 50%;
-  background: white;
+  background: rgb(201, 173, 173);
   position: absolute;
   font-size: 59%;
-  color: antiquewhite;
+  color: green;
   transition: 0.7s;
 }
 .navbar:hover .menu li:nth-child(1){
@@ -92,7 +92,7 @@ transform: rotate(85deg);
       }
       .navbar:hover .menu li:nth-child(4) a{
         transition-delay: 0.32s;
-        transform: rotate(125deg);
+        transform: rotate(505deg);
         }
       .navbar:hover .menu li:nth-child(5){
         transition-delay: 0.32s;
@@ -100,7 +100,7 @@ transform: rotate(85deg);
         }
         .navbar:hover .menu li:nth-child(5) a{
           transition-delay: 0.64s;
-          transform: rotate(595deg);
+          transform: rotate(465deg);
           }
         .navbar:hover .menu li:nth-child(6){
           transition-delay: 0.64s;
@@ -108,15 +108,15 @@ transform: rotate(85deg);
           }
           .navbar:hover .menu li:nth-child(6) a{
             transition-delay: 1.28s;
-            transform: rotate(165deg);
+            transform: rotate(425deg);
             }
           .navbar:hover .menu li:nth-child(7){
-            transition-delay: 0.02s;
-            transform: rotate(555deg);
+            transition-delay: 1.28;
+            transform: rotate(325deg);
             }
             .navbar:hover .menu li:nth-child(8){
-              transition-delay: 0.02s;
-              transform: rotate(555deg);
+              transition-delay: 2.56s;
+              transform: rotate(385deg);
               }
 
 
