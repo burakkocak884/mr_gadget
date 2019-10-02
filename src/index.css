@@ -42,6 +42,7 @@ body {
   transition: transform 0.4s 0.08s; z-index: 0s 0.5s;
 }
 .navbar .menu  li{
+ 
   position: absolute;
   top: -80px;
   left: -80px;
@@ -49,6 +50,7 @@ body {
   transition: all 0.5s 0.1s;
 }
 .navbar:hover .menu li{
+  
   transition: all 0.7s;
 }
 .navbar .menu li a{
@@ -130,7 +132,24 @@ transform: rotate(85deg);
                 }
   .selected-tool{
     background-color: rgb(170, 170, 174);
+    border-radius: 10%;
+  
   }
+ 
+  td tr {
+    padding:1px;
+    width: 5px;
+    height: 1%;
+    
+  }
+  .calculator-table tr td{
+   
+  
+ padding: 0px;
+ 
+    
+  }
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
