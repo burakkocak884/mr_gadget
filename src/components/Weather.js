@@ -36,26 +36,34 @@ class Weather extends Component{
                         
                     }) }
 
+                   degToCompass(num) {
+                        var val = Math.floor((num / 22.5) + 0.5);
+                        var arr = ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"];
+                        return arr[(val % 16)];
+                    }
+
 
     render(){
-         console.log('weather',this.props.myweather)
+        
+        console.log('pros on weather.js=',this.props)
          //debugger
          const{myweather} = this.props
         
          if(this.props.myweather.name){
+          
              let minTemp = Math.floor((9/5) *(this.props.myweather.main.temp_min - 273) + 32)
              let maxTemp = Math.floor((9/5) *(this.props.myweather.main.temp_max - 273) + 32)
-            
+             let theSpeed = Math.floor((3.6/1.609) * (this.props.myweather.wind.speed))
          
 
         return(
             <div className='weather-form'>
                 <p>Weather info for: {myweather.name} in {myweather.sys.country}</p>
                 <p>Description: {myweather.weather[0].main} , {myweather.weather[0].description} </p>
-                <p>Wind speed: {myweather.wind.speed} mph</p>
+                <p>Wind speed: ~{theSpeed} mph {this.degToCompass(this.props.myweather.wind.deg)}</p>
                 <p>Humidity: {myweather.main.humidity} %</p>
                 <p>Air Pressure: {myweather.main.pressure} hPa</p>
-                <p>Lowest temp: {minTemp} F, Highest temp: {maxTemp} F</p>
+                <p>Lowest: {minTemp} F, Highest: {maxTemp} F</p>
                
                 <Form >
                     <Form.Field>
@@ -75,7 +83,7 @@ class Weather extends Component{
             }
             return(
                 <div className='weather-form'>
-                    <p>Enter a city</p>
+                    <p>Enter Zip Code</p>
                     
 
                    

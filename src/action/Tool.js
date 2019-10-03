@@ -1,5 +1,5 @@
 export const findWeather = city => {
-    debugger
+    //debugger
 
       return (dispatch) => {
         //dispatch({ type: 'START_GETTING_WEATHER_INFO' });
