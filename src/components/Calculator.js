@@ -37,41 +37,47 @@ import {connect} from 'react-redux';
                     
               
                   
-                    
-                    <button onClick={this.handleChange} value={'clear'}>C</button>
-                    <button onClick={this.handleChange} value={'percent'}>%</button>
-                    <button onClick={this.handleChange} value={'modular'}>Mod</button>
-                    <button onClick={this.handleChange} value={'addition'}>+</button>
-                    
-                    
-                    <button onClick={this.handleChange} value={1}>1</button>
-                    <button onClick={this.handleChange} value={2}>2</button>
-                    <button onClick={this.handleChange} value={3}>3</button>
-                    <button onClick={this.handleChange} value={'substrack'}>-</button>
-                    
+                    <table >
+                  
+                    <tr>
+                    <td><button  className='ui inverted button' onClick={this.handleChange} value={'clear'}>C</button></td>
+                    <td><button  onClick={this.handleChange} value={'percent'}>%</button></td>
+                    <td><button onClick={this.handleChange} value={'modular'}>Mod</button></td>
+                    <td><button onClick={this.handleChange} value={'addition'}>+</button></td>
+                    </tr>
+                    <tr>
+                    <td><button onClick={this.handleChange} value={1}>1</button></td>
+                    <td><button onClick={this.handleChange} value={2}>2</button></td>
+                    <td><button onClick={this.handleChange} value={3}>3</button></td>
+                    <td><button onClick={this.handleChange} value={'substrack'}>-</button></td>
+                    </tr>
 
-                    
-                    <button onClick={this.handleChange} value={4}>4</button>
-                    <button onClick={this.handleChange} value={5}>5</button>
-                    <button onClick={this.handleChange} value={6} >6</button>
-                    <button onClick={this.handleChange} value={'multiply'} >*</button>
-                    
+                    <tr>
+                    <td><button onClick={this.handleChange} value={4}>4</button></td>
+                    <td><button onClick={this.handleChange} value={5}>5</button></td>
+                    <td><button onClick={this.handleChange} value={6} >6</button></td>
+                    <td><button onClick={this.handleChange} value={'multiply'} >*</button></td>
+                    </tr>
 
-                    
-                    <button onClick={this.handleChange} value={7} >7</button>
-                    <button onClick={this.handleChange} value={8} >8</button>
-                    <button onClick={this.handleChange} value={9} >9</button>
-                    <button onClick={this.handleChange} value={'division'}  >\</button>
-                    
-                    
-                    <button onClick={this.handleChange} value={'#'} >#</button>
-                    <button onClick={this.handleChange} value={0} >0</button>
-                    <button onClick={this.handleChange} value={'square'} >n^2</button>
-                    <button onClick={this.handleChange} value={'equal'} >=</button>
-                    
+                    <tr>
+                    <td><button onClick={this.handleChange} value={7} >7</button></td>
+                    <td><button onClick={this.handleChange} value={8} >8</button></td>
+                    <td><button onClick={this.handleChange} value={9} >9</button></td>
+                    <td><button onClick={this.handleChange} value={'division'}  >\</button></td>
+                    </tr>
+                    <tr>
+                    <td><button onClick={this.handleChange} value={'#'} >#</button></td>
+                    <td><button onClick={this.handleChange} value={0} >0</button></td>
+                    <td><button onClick={this.handleChange} value={'square'} >n^2</button></td>
+                    <td><button onClick={this.handleChange} value={'equal'} >=</button></td>
+                    </tr>
 
 
 
+
+
+
+                </table>
 
 
 
