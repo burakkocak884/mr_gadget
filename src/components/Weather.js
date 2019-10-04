@@ -59,7 +59,7 @@ class Weather extends Component{
         return(
             <div className='weather-form'>
                 <p>City: <b>{myweather.name}</b> in {myweather.sys.country}</p>
-                <p>Forecast is {myweather.weather[0].description} at {(minTemp + maxTemp)/2} F</p>
+                <p>Forecast is {myweather.weather[0].description} at {Math.floor((minTemp + maxTemp)/2)} F</p>
                 <p>Wind Speed: ~{theSpeed} mph {this.degToCompass(this.props.myweather.wind.deg)}</p>
                 <p>Humidity: {myweather.main.humidity} %</p>
                 <p>Air Pressure: {myweather.main.pressure} hPa</p>

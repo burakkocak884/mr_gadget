@@ -17,7 +17,7 @@ import {calcInput} from '../action/Tool'
     }
     handleChange = event =>{
         console.log('valid value =',event.target.value)
-        debugger
+        //debugger
          this.setState({ placeHolder: this.state.placeHolder + event.target.value
         })
      }
@@ -47,11 +47,11 @@ import {calcInput} from '../action/Tool'
             
 
                 <div className='calculator'>
-                     <p>{display}</p>
+                     
                      <Form >
                         <Form.Field>
                         
-                            <input  type='text' onChange={this.handleChange} name ='city' placeholder='Type or Click' ></input>
+                            <input  type='textarea' onChange={this.handleChange} name ='city' placeholder='Type or Click' value={this.state.placeHolder}></input>
                         </Form.Field>
                         </Form>
                     <div class="ui inverted segment"> 
@@ -105,7 +105,7 @@ import {calcInput} from '../action/Tool'
                
 
                
-                {this.state.placeHolder}
+                
                
                 
                 
