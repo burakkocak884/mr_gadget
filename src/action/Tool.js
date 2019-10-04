@@ -14,4 +14,12 @@ export const findWeather = city => {
           });
     }
     }
+
+    export const calcInput = (input) =>{
+       
+        return{
+            type: 'CALC_INPUT',
+            input
+        }
+    }
     
