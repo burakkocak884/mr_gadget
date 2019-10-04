@@ -1,14 +1,14 @@
 
 
 import React,{Component} from 'react';
-import {Table} from 'semantic-ui-react';
+import {Form, Button, Input, Table} from 'semantic-ui-react'
 import {connect} from 'react-redux';
   class Calculator extends Component{
     constructor(props){
         super(props)
         
         this.state ={
-            placeHolder: [],
+            placeHolder: '',
             screen: ''
 
         }
@@ -16,13 +16,14 @@ import {connect} from 'react-redux';
     }
     handleChange = event =>{
         // console.log('this =',this)
-        console.log('19 value =',event.target.value)
+        console.log('valid value =',event.target.value)
         //debugger
         
         this.setState = ({
            
-            placeHolder: [...this.state.placeHolder, event.target.value]
+            placeHolder: this.state.placeHolder + event.target.value
         })
+        console.log('state=',this.state.placeHolder)
         
 
     }
@@ -34,8 +35,14 @@ import {connect} from 'react-redux';
             
 
                 <div className='calculator'>
-                    
-                    <div class="ui inverted segment">
+                     <Form >
+                        <Form.Field>
+                        
+                            <input  type='text' onChange={this.handleChange} name ='city' placeholder='Type or Click'></input>
+                        </Form.Field>
+                        </Form>
+                    <div class="ui inverted segment"> 
+                      
                   
                     <table >
                   

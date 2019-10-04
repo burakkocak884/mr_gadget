@@ -58,12 +58,12 @@ class Weather extends Component{
 
         return(
             <div className='weather-form'>
-                <p>Weather info for: {myweather.name} in {myweather.sys.country}</p>
-                <p>Description: {myweather.weather[0].main} , {myweather.weather[0].description} </p>
-                <p>Wind speed: ~{theSpeed} mph {this.degToCompass(this.props.myweather.wind.deg)}</p>
+                <p>City: <b>{myweather.name}</b> in {myweather.sys.country}</p>
+                <p>Forecast is {myweather.weather[0].description} at {(minTemp + maxTemp)/2} F</p>
+                <p>Wind Speed: ~{theSpeed} mph {this.degToCompass(this.props.myweather.wind.deg)}</p>
                 <p>Humidity: {myweather.main.humidity} %</p>
                 <p>Air Pressure: {myweather.main.pressure} hPa</p>
-                <p>Lowest: {minTemp} F, Highest: {maxTemp} F</p>
+                
                
                 <Form >
                     <Form.Field>
@@ -84,6 +84,7 @@ class Weather extends Component{
             return(
                 <div className='weather-form'>
                     <p>Enter Zip Code</p>
+                    <p>for Weather Information</p>
                     
 
                    
