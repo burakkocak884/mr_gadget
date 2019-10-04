@@ -152,7 +152,8 @@ transform: rotate(85deg);
     
   }
   .calculator{
- padding: 50px;
+ padding: 40px;
+ color:black;
  }
 
    .weather-form{
