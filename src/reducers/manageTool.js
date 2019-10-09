@@ -14,24 +14,36 @@ export default function manageTool(state = {myweather: '', calcInput: ''
     case 'CALC_INPUT':
    let char = action.input
     let regex = /^\s*([-+]?)(\d+)(?:\s*([-+*\/])\s*((?:\s[-+])?\d+)\s*)+$/
+   
+let regNum = /\w/
+ let theNums = char.match(regNum)
+ 
     let cond =regex.test(char)
     let chAry = action.input.split('')
     let errorMessage ;
-      let result;
+    let result = 0;
+      let currentNum = 0;
+      let secondNum = 0;
+      let fNums = 0;
+      let sNums = 0;
+      let operators ={}
+      let numbers = {}
+      let counter = 0 ;
+      //debugger
+      let endingInd = 0;
+      let beginningInd = 0;
 
   if(cond === true){
-    chAry.map(c=>{
-     let theNum = parseInt(c)
-      if(theNum === NaN){
-        let myChar =   c.toString()
-        debugger
- 
-    }else if (theNum !== NaN){
-    
-      debugger
-  }})
+    result = chAry.join('')
+    result = eval(result)
   
-//debugger
+  debugger
+
+  
+ return result;
+     
+  
+
   }else{
     //debugger
     errorMessage = "Wrong Input, try again";
@@ -47,7 +59,7 @@ export default function manageTool(state = {myweather: '', calcInput: ''
  
       
        
- 
+  
  
        
  

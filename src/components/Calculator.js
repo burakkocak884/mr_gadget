@@ -32,6 +32,7 @@ import {calcInput} from '../action/Tool'
        this.props.calcInput(this.state.placeHolder)
         
     }
+    
 
 
     render(){
@@ -40,7 +41,7 @@ import {calcInput} from '../action/Tool'
         if(this.props.message){
                 display = this.props.message.toString()
         }else if(this.props.result){
-            display = this.props.result
+            display = this.props
         }
         return(
            
@@ -50,8 +51,10 @@ import {calcInput} from '../action/Tool'
                      
                      <Form >
                         <Form.Field>
-                        
+                            <label>Input</label>
                             <input  type='textarea' onChange={this.handleChange} name ='city' placeholder='Type or Click' value={this.state.placeHolder}></input>
+                           <label>Result</label>
+                            <input  type='textarea' onChange={this.handleChange} name ='city' placeholder='Result' value={display}></input>
                         </Form.Field>
                         </Form>
                     <div class="ui inverted segment"> 
@@ -62,7 +65,7 @@ import {calcInput} from '../action/Tool'
                     <tr>
                     <td><button  className='ui inverted button' onClick={this.handleClear} value={'clear'}>C</button></td>
                     <td><button  className='ui inverted button' onClick={this.handleChange} value={'%'}>%</button></td>
-                    <td><button className='ui inverted button' onClick={this.handleChange} value={'mod'}>Mod</button></td>
+                    <td><button className='ui inverted button' onClick={this.handleChange} value={'%'}>Mod</button></td>
                     <td><button  className='ui inverted button' onClick={this.handleChange} value={'+'}>+</button></td>
                     </tr>
                     <tr>
@@ -83,12 +86,12 @@ import {calcInput} from '../action/Tool'
                     <td><button className='ui inverted button' onClick={this.handleChange} value={7} >7</button></td>
                     <td><button className='ui inverted button' onClick={this.handleChange} value={8} >8</button></td>
                     <td><button className='ui inverted button' onClick={this.handleChange} value={9} >9</button></td>
-                    <td><button className='ui inverted button' onClick={this.handleChange} value={":"} >\</button> </td>
+                    <td><button className='ui inverted button' onClick={this.handleChange} value={"/"} >\</button> </td>
                     </tr>
                     <tr>
-                    <td><button className='ui inverted button' onClick={this.handleChange} value={'#'} >#</button></td>
+                    <td><button className='ui inverted button' onClick={this.handleChange} value={'('} >(</button></td>
                     <td><button className='ui inverted button' onClick={this.handleChange} value={0} >0</button></td>
-                    <td><button className='ui inverted button' onClick={this.handleChange} value={'**2'} >n^2</button></td>
+                    <td><button className='ui inverted button' onClick={this.handleChange} value={')'} >)</button></td>
                     <td><button type='submit' className='ui inverted button' onClick={this.handleSubmit} value={'equal'} >=</button></td>
                     </tr>
 
