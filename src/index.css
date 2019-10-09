@@ -174,8 +174,38 @@ code {
 }
 #thehome{
   padding: 8px;
-  background-color: rgb(250, 234, 215);
+  background-color: rgb(248, 217, 217);
   color:rgb(6, 6, 29);
+}
+#calendar{
+  padding: 8px;
+  background-color: rgb(248, 242, 213);
+  color:rgb(133, 7, 13);
+}
+#calculator{
+  padding: 8px;
+  background-color: rgb(210, 245, 190);
+  color:rgb(12, 8, 202);
+}
+#cloud{
+  padding: 8px;
+  background-color: rgb(85, 179, 241);
+  color:rgb(244, 244, 248);
+}
+#github{
+  padding: 8px;
+  background-color: rgb(250, 234, 215);
+  color:rgb(2, 2, 10);
+}
+#linkedin{
+  padding: 8px;
+  background-color: rgb(250, 234, 215);
+  color:rgb(10, 102, 177);
+}
+#twitter{
+  padding: 8px;
+  background-color: rgb(250, 234, 215);
+  color:rgb(18, 153, 243);
 }
 
 #facebook{
@@ -184,36 +214,8 @@ code {
   background-color: rgb(250, 234, 215);
   color:rgb(16, 16, 129);
 }
-#twitter{
-  padding: 8px;
-  background-color: rgb(250, 234, 215);
-  color:rgb(18, 153, 243);
-}
-#linkedin{
-  padding: 8px;
-  background-color: rgb(250, 234, 215);
-  color:rgb(10, 102, 177);
-}
-#github{
-  padding: 8px;
-  background-color: rgb(250, 234, 215);
-  color:rgb(2, 2, 10);
-}
-#cloud{
-  padding: 8px;
-  background-color: rgb(85, 179, 241);
-  color:rgb(244, 244, 248);
-}
-#calculator{
-  padding: 8px;
-  background-color: rgb(236, 236, 250);
-  color:rgb(12, 8, 202);
-}
-#calendar{
-  padding: 8px;
-  background-color: bisque;
-  color:rgb(133, 7, 13);
-}
+
+
 
 
 
