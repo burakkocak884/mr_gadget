@@ -1,7 +1,7 @@
 
 
 import React,{Component} from 'react';
-import {Form} from 'semantic-ui-react'
+import {Form, Label} from 'semantic-ui-react'
 import {connect} from 'react-redux';
 import {calcInput} from '../action/Tool'
   class Calculator extends Component{
@@ -43,12 +43,12 @@ import {calcInput} from '../action/Tool'
 
 
                     render(){
-                        // console.log('props=',this.props.message)
+                         console.log('props=',this.props)
                         let display; 
-
                         if(this.props.message){
-                                display = this.props.message.toString()
-                        }else if(this.props.result){
+                            display = this.props.message
+                        }
+                         if(this.props.result){
                             display = this.props.result
                         }
                         return(
@@ -59,12 +59,12 @@ import {calcInput} from '../action/Tool'
                                     
                                     <Form >
                                             <Form.Field>
-                                            
-                                            <label>Input</label>
-                                                <input  type='textarea' onChange={this.handleChange} name ='city' placeholder='Type or Click' value={this.state.placeHolder}></input>
-                                                
-                                                <label>Output</label>
-                                            
+                                                 <Label>Input</Label>
+                                                 <input  type='textarea' onChange={this.handleChange} name ='city' placeholder='Type or Click' value={this.state.placeHolder}></input>
+                                            </Form.Field>
+                                                <p></p>
+                                            <Form.Field>
+                                                <Label>Output</Label>
                                                 <input  type='textarea' onChange={this.handleChange} name ='city' placeholder='Result' value={display}></input>
                                             </Form.Field>
                                      </Form>
@@ -114,10 +114,10 @@ import {calcInput} from '../action/Tool'
 }
 
 const mapStateToProps = state =>{
-    console.log('mystate in calc=',state)
+   // console.log('mystate in calc=',state)
     return{
         result: state.result,
-        message: state
+        message: state.message
     }
 }
 export default connect(mapStateToProps, {calcInput})(Calculator);

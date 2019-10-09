@@ -11,16 +11,15 @@ export default function manageTool(state = {myweather: '', calcInput: ''
 
      case 'CALC_INPUT':
         let theString = action.input
+        let message ;
        
               try {
-               debugger
-               return {result: eval(theString)}; 
+                return {result: eval(theString)}; 
             } catch (e) {
                 if (e instanceof SyntaxError) {
-                    alert('Wrong input');
-                } else {
-                    throw( e );
-                }
+                   // alert('Wrong input, Try again');
+                    return {message: "Wrong input, Try again"}
+                } else {throw( e );}
             }
    
         
