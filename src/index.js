@@ -7,7 +7,7 @@ import App from './App';
 import thunk from 'redux-thunk';
 import manageTool from './reducers/manageTool.js';
 import { Provider } from 'react-redux';
-import { createStore, applyMiddleware, compose,combineReducers } from 'redux';
+import { createStore, applyMiddleware, compose} from 'redux';
 
 
 

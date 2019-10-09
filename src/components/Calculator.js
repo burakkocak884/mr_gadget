@@ -1,7 +1,7 @@
 
 
 import React,{Component} from 'react';
-import {Form, Button, Input, Table} from 'semantic-ui-react'
+import {Form} from 'semantic-ui-react'
 import {connect} from 'react-redux';
 import {calcInput} from '../action/Tool'
   class Calculator extends Component{
@@ -53,7 +53,7 @@ import {calcInput} from '../action/Tool'
                         <Form.Field>
                             <label>Input</label>
                             <input  type='textarea' onChange={this.handleChange} name ='city' placeholder='Type or Click' value={this.state.placeHolder}></input>
-                           <label>Result</label>
+                           <label>Output</label>
                             <input  type='textarea' onChange={this.handleChange} name ='city' placeholder='Result' value={display}></input>
                         </Form.Field>
                         </Form>

@@ -152,7 +152,7 @@ transform: rotate(85deg);
     
   }
   .calculator{
- padding: 40px;
+ padding: 20px;
  color:black
  }
 
@@ -172,3 +172,51 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+#thehome{
+  padding: 8px;
+  background-color: rgb(250, 234, 215);
+  color:rgb(6, 6, 29);
+}
+
+#facebook{
+  font-size: 40px;
+  padding: 8px;
+  background-color: rgb(250, 234, 215);
+  color:rgb(16, 16, 129);
+}
+#twitter{
+  padding: 8px;
+  background-color: rgb(250, 234, 215);
+  color:rgb(18, 153, 243);
+}
+#linkedin{
+  padding: 8px;
+  background-color: rgb(250, 234, 215);
+  color:rgb(10, 102, 177);
+}
+#github{
+  padding: 8px;
+  background-color: rgb(250, 234, 215);
+  color:rgb(2, 2, 10);
+}
+#cloud{
+  padding: 8px;
+  background-color: rgb(85, 179, 241);
+  color:rgb(244, 244, 248);
+}
+#calculator{
+  padding: 8px;
+  background-color: rgb(236, 236, 250);
+  color:rgb(12, 8, 202);
+}
+#calendar{
+  padding: 8px;
+  background-color: bisque;
+  color:rgb(133, 7, 13);
+}
+
+
+
+
+
+
