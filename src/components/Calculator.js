@@ -90,7 +90,7 @@ import {calcInput} from '../action/Tool'
                                                         <td><button className='ui inverted button' onClick={this.handleChange} value={4}>4</button></td>
                                                         <td><button className='ui inverted button' onClick={this.handleChange} value={5}>5</button></td>
                                                         <td><button className='ui inverted button' onClick={this.handleChange} value={6} >6</button></td>
-                                                        <td><button className='ui inverted button' onClick={this.handleChange} value={'*'} >*</button></td>
+                                                        <td><button className='ui inverted button' onClick={this.handleChange} value={'*'} >x</button></td>
                                                     </tr>
 
                                                     <tr>
