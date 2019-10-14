@@ -4,6 +4,7 @@ import {BrowserRouter as Router,Route, Switch} from 'react-router-dom';
 import Calculator from './components/Calculator'
 import Weather from './components/Weather'
 import Calendar from './components/Calendar'
+import UnitCategoryContainer from './containers/UnitCategoryContainer'
 import {findWeather} from './action/Tool'
 import {connect} from 'react-redux'
 
@@ -18,6 +19,7 @@ function App() {
                         <Route path='/calculator' render={()=>(<Calculator />)}></Route>
                         <Route path='/weather' render={()=>(<Weather />)}></Route>
                         <Route path='/calendar' render={()=>(<Calendar />)}>Calendar</Route>
+                        <Route path='/units' render={()=>(<UnitCategoryContainer />)}></Route>
                         
                     </Switch>
 
@@ -30,7 +32,7 @@ function App() {
                     <li><a href='https://github.com/burakkocak884' className='fa fa-github' id='github'target="_blank" rel="noopener noreferrer"> </a></li>
                     <li ><a href='/weather' id='cloud'className='fa fa-cloud'> </a></li>
                     <li><a href='/calculator' id='calculator' className='fa fa-calculator'> </a></li>
-                    <li><a href='/calendar' id='calendar' className='fa fa-calendar'></a> </li>
+                    <li><a href='/units' id='units' className='fa fa-gear'></a> </li>
                     <li><a href='/home' id='thehome'className='fa fa-home'> </a></li>
                     
                 </ul>
