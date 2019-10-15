@@ -50,10 +50,21 @@ class UnitCategoryContainer extends Component {
                  let firstUnit = this.state.firstSubUnit
                  let secondUnit = this.state.secondSubUnit
                  this.setState({input1: value})
+                 if(firstUnit === 'Miles per Gallon'|| firstUnit === 'Kilometer per Liter'||firstUnit === 'Liter per 100 Km'){
+                      
+                    if (firstUnit === "Miles per Gallon" && secondUnit === "Kilometer per Liter"){this.setState({ input2: value/2.352})}
+                     else if (firstUnit === "Miles per Gallon" && secondUnit === "Liter per 100 Km"){this.setState({ input2: value*253.215})}
+                     else if (firstUnit === "Kilometer per Liter" && secondUnit === "Miles per Gallon"){this.setState({ input2: value*2.35215})}
+                     else if (firstUnit === "Kilometer per Liter" && secondUnit === "Liter per 100 Km"){this.setState({ input2: 100/value})}
+                     else if (firstUnit === "Liter per 100 Km" && secondUnit === "Miles per Gallon"){this.setState({ input2: 235.215/value})}
+                     else if (firstUnit === "Liter per 100 Km" && secondUnit === "Kilometer per Liter"){this.setState({ input2: 100/value})}
+                       
+            
+                 }else{
                  var convert = require('convert-units')
                  let theResult = convert(value).from(firstUnit).to(secondUnit)
                  this.setState({input2: theResult})
-              }
+              }}
                
                    
                
