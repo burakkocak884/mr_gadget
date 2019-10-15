@@ -56,6 +56,7 @@ import {calcInput} from '../action/Tool'
                             
 
                                 <div className='calculator'>
+                                    <p className='tool-headline'>Calculator</p>
                                     
                                     <Form >
                                             <Form.Field>

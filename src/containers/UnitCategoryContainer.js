@@ -78,20 +78,21 @@ class UnitCategoryContainer extends Component {
         return(
             
             <div>
+                <p className='tool-headline'>Unit Convertor</p>
                 <select name="category" multiple="" class="ui fluid dropdown" onChange={this.handleChange} >
                                 <option value="">Select A Unit Category</option>
                                 {categories.map(k=>( <option value={`${k}`}>{k}</option> ))}
                    </select>
                    <Form>
                           <Form.Field>
-                              <input placeholder='first box'  value={this.state.input1} onChange={this.handleInput1}></input>
+                              <input className='unit-input' placeholder='first box'  value={this.state.input1} onChange={this.handleInput1}></input>
                                     <select name="first" multiple="" class="ui fluid dropdown" onChange={this.handleSelect1}>
                                         <option value="">Select A Unit</option>
                                         {this.state.unitTypes.map(c=>(
                                         <option valueFirst={`${c}`}>{c}</option>
                                        ))}
                                     </select>
-                               <input placeholder='second box'  value={this.state.input2} onChange={this.handleInput2}></input>
+                               <input className='unit-input' placeholder='second box'  value={this.state.input2} onChange={this.handleInput2}></input>
                                     <select name="second" multiple="" class="ui fluid dropdown" onChange={this.handleSelect2}>
                                         <option value="">Select A Unit</option>
                                         {this.state.unitTypes.map(c=>( <option valueSecond={`${c}`}>{c}</option> ))}

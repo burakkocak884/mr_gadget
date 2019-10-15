@@ -58,11 +58,12 @@ class Weather extends Component{
 
         return(
             <div className='weather-form'>
-                <p>City: <b>{myweather.name}</b> in {myweather.sys.country}</p>
-                <p>Forecast is {myweather.weather[0].description} at {Math.floor((minTemp + maxTemp)/2)} F</p>
-                <p>Wind Speed: ~{theSpeed} mph {this.degToCompass(this.props.myweather.wind.deg)}</p>
-                <p>Humidity: {myweather.main.humidity} %</p>
-                <p>Air Pressure: {myweather.main.pressure} hPa</p>
+                <p className='tool-headline'>Weather Info</p>
+                <p>City: <b><span className='weather-data'>{myweather.name}</span></b> in <span className='weather-data'>{myweather.sys.country}</span></p>
+                <p>Forecast is <span className='weather-data'>{myweather.weather[0].description}</span> at <span className='weather-data'>{Math.floor((minTemp + maxTemp)/2)}</span> F</p>
+                <p>Wind Speed: ~<span className='weather-data'>{theSpeed}</span> mph <span className='weather-data'>{this.degToCompass(this.props.myweather.wind.deg)}</span></p>
+                <p>Humidity: <span className='weather-data'>{myweather.main.humidity}</span> %</p>
+                <p>Air Pressure: <span className='weather-data'>{myweather.main.pressure}</span> hPa</p>
                 
                
                 <Form >
@@ -83,6 +84,7 @@ class Weather extends Component{
             }
             return(
                 <div className='weather-form'>
+                     <p className='tool-headline'>Weather Info</p>
                     <p>Enter Zip Code</p>
                     <p>for Weather Information</p>
                     
