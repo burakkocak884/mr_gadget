@@ -2,6 +2,11 @@ body {
   background-color: rgb(232, 242, 239);
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   overflow: hidden;
+  background-image: url('coffee.jpg');
+  background-size:cover;
+ 
+  
+  
   
 }
 .navbar{
