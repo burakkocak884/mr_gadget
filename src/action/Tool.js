@@ -3,8 +3,8 @@ export const findWeather = city => {
 
       return (dispatch) => {
         //dispatch({ type: 'START_GETTING_WEATHER_INFO' });
-        let theKey = '4a580b938e7bce4964ca8d24e3503b3c'
-        return fetch(`http://api.openweathermap.org/data/2.5/weather?zip=${city},us&appid=${theKey}`)
+        const API_KEY = process.env.REACT_APP_WEATHER_API_KEY
+        return fetch(`http://api.openweathermap.org/data/2.5/weather?zip=${city},us&appid=${API_KEY}`)
           .then(response => response.json())
           .then(foundInfo =>  {
             console.log('returned info= ',foundInfo)
