@@ -11,6 +11,7 @@ import {connect} from 'react-redux'
 function App() {
   return (
     <div>
+      
       <Router>
             <div className='navbar'>
                 <div className='selected-tool'>
@@ -38,6 +39,7 @@ function App() {
                 </ul>
             </div>
         </Router>
+        <p className='copy-right'>&copy; 2019 <strong>Burak Kocak</strong></p>
       </div>
      
   );
