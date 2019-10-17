@@ -9,6 +9,7 @@ import {findWeather} from './action/Tool'
 import {connect} from 'react-redux'
 
 function App() {
+ 
   return (
     <div>
      
@@ -22,7 +23,7 @@ function App() {
                 
                 
                     <Switch>
-                    <Route exact path='/' ><span className="touch-here"><p>Touch</p> Here </span></Route>
+                    <Route exact path='/' ><span className="touch-here"><p>Touch or Hover</p> <p>on</p><p>Here</p><p>To Start</p> </span></Route>
                         <Route path='/home' >Welcome to Mr. Gadget</Route>
                         <Route path='/calculator' render={()=>(<Calculator />)}></Route>
                         <Route path='/weather' render={()=>(<Weather />)}></Route>
