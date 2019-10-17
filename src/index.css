@@ -242,6 +242,15 @@ code {
 .copy-right{
   margin: 30px;
 }
+.touch-here{
+  font-size: 40px;
+  color: rgb(10, 1, 1);
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bolder;
+  font-style: italic;
+ 
+  
+}
 
 
 

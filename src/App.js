@@ -12,15 +12,17 @@ function App() {
   return (
     <div>
      
-      
+     
       <Router>
+        
             <div className='navbar'>
-          
+            
                 <div className='selected-tool'>
                 
                 
+                
                     <Switch>
-                     
+                    <Route exact path='/' ><span className="touch-here"><p>Touch</p> Here </span></Route>
                         <Route path='/home' >Welcome to Mr. Gadget</Route>
                         <Route path='/calculator' render={()=>(<Calculator />)}></Route>
                         <Route path='/weather' render={()=>(<Weather />)}></Route>
@@ -42,11 +44,11 @@ function App() {
                     <li><a href='/home' id='thehome'className='fa fa-home'> </a></li>
                     
                 </ul>
-                <p>Touch Here to Start</p>
+               
             </div>
             
         </Router>
-        <p className='copy-right'>&copy; 2019 <strong>Burak Kocak</strong></p>
+        
       </div>
      
   );
