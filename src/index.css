@@ -51,8 +51,8 @@ body {
  
   position: absolute;
   top: -90px;
-  left:-80px;
-  transform-origin: 230px 230px;
+  left:-85px;
+  transform-origin: 230px 250px;
   transition: all 0.5s 0.1s;
   
 }
