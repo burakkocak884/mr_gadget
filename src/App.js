@@ -9,7 +9,6 @@ import {findWeather} from './action/Tool'
 import {connect} from 'react-redux'
 
 function App() {
- 
   return (
     <div>
      
