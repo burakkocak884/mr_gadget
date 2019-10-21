@@ -15,26 +15,14 @@ class Weather extends Component{
         }
 
 
-    handleChange = event =>{
-        this.setState({
-        
-            [event.target.name]: event.target.value
-        })
-        
-                }
+                handleChange = event =>{this.setState({[event.target.name]: event.target.value})}
 
 
                 handleSubmit = event =>{
-                     //console.log(this.state)
-                    //debugger
-                    event.preventDefault()
-                    // this.state.year = parseInt(this.state.year)
-                
-                    this.props.findWeather(this.state.city)
-                    this.setState({
-                        city: ''
-                        
-                    }) }
+                   event.preventDefault()
+                   this.props.findWeather(this.state.city)
+                   this.setState({city: ''})
+                 }
 
                    degToCompass(num) {
                         var val = Math.floor((num / 22.5) + 0.5);
@@ -44,12 +32,9 @@ class Weather extends Component{
 
 
     render(){
-        
-        console.log('pros on weather.js=',this.props)
-         //debugger
-         const{myweather} = this.props
-        
-         if(this.props.myweather.name){
+        let newDate = new Date()
+       const{myweather} = this.props
+        if(this.props.myweather.name){
           
              let minTemp = Math.floor((9/5) *(this.props.myweather.main.temp_min - 273) + 32)
              let maxTemp = Math.floor((9/5) *(this.props.myweather.main.temp_max - 273) + 32)
@@ -59,6 +44,7 @@ class Weather extends Component{
         return(
             <div className='weather-form'>
                 <p className='tool-headline'>Weather Info</p>
+                <p>Time: <span className='weather-data'>{newDate.getHours()}:{newDate.getMinutes()}:{newDate.getSeconds()}</span></p>
                 <p><b><span className='weather-data'>{myweather.name}</span></b> in <span className='weather-data'>{myweather.sys.country}</span></p>
                 <p>Forecast shows <span className='weather-data'>{myweather.weather[0].description}</span> at <span className='weather-data'>{Math.floor((minTemp + maxTemp)/2)}</span> F</p>
                 <p>Wind Speed: ~<span className='weather-data'>{theSpeed}</span> mph <span className='weather-data'>{this.degToCompass(this.props.myweather.wind.deg)}</span></p>
@@ -85,6 +71,7 @@ class Weather extends Component{
             return(
                 <div className='weather-form'>
                      <p className='tool-headline'>Weather Info</p>
+                    
                     <p>Enter Zip Code</p>
                     <p>for Weather Information</p>
                     
