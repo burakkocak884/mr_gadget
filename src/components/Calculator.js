@@ -34,7 +34,7 @@ import {calcInput} from '../action/Tool'
                 // console.log('the state=',this.state)
                 }
 
-
+                //handleSubmit will insert given value from the form to be sent to reducer
                 handleSubmit = event =>{
                     event.preventDefault()
                 this.props.calcInput(this.state.placeHolder)
@@ -43,7 +43,6 @@ import {calcInput} from '../action/Tool'
 
 
                     render(){
-                         console.log('props=',this.props)
                         let display; 
                         if(this.props.message){
                             display = this.props.message
@@ -52,23 +51,19 @@ import {calcInput} from '../action/Tool'
                             display = this.props.result
                         }
                         return(
-                        
-                            
-
-                                <div className='calculator'>
+                         <div className='calculator'>
                                     <p className='tool-headline'>Calculator</p>
-                                    
-                                    <Form >
-                                            <Form.Field>
-                                                 <Label>Input</Label>
-                                                 <input  type='textarea' onChange={this.handleChange} name ='city' placeholder='Type or Click' value={this.state.placeHolder}></input>
-                                            </Form.Field>
-                                                <p></p>
-                                            <Form.Field>
-                                                <Label>Output</Label>
-                                                <input  type='textarea' onChange={this.handleChange} name ='city' placeholder='Result' value={display}></input>
-                                            </Form.Field>
-                                     </Form>
+                                         <Form >
+                                                    <Form.Field>
+                                                        <Label>Input</Label>
+                                                        <input  type='textarea' onChange={this.handleChange} name ='city' placeholder='Type or Click' value={this.state.placeHolder}></input>
+                                                    </Form.Field>
+                                                        <p></p>
+                                                    <Form.Field>
+                                                        <Label>Output</Label>
+                                                        <input  type='textarea' onChange={this.handleChange} name ='city' placeholder='Result' value={display}></input>
+                                                    </Form.Field>
+                                            </Form>
                                              <div class="ui inverted segment"> 
                                     
                                 
@@ -114,11 +109,10 @@ import {calcInput} from '../action/Tool'
 
 }
 
-const mapStateToProps = state =>{
-   // console.log('mystate in calc=',state)
-    return{
-        result: state.result,
-        message: state.message
-    }
-}
-export default connect(mapStateToProps, {calcInput})(Calculator);
+        const mapStateToProps = state =>{
+        return{
+                result: state.result,
+                message: state.message
+            }
+        }
+        export default connect(mapStateToProps, {calcInput})(Calculator);

@@ -247,9 +247,23 @@ code {
   color: rgb(10, 1, 1);
   font-family: 'Courier New', Courier, monospace;
   font-weight: bolder;
-  font-style: italic;
- 
-  
+  font-style: italic;  
+}
+.welcome{
+  padding: 50px;
+  color: brown;
+  font-family: fantasy;
+  font-weight: bolder;
+  font-size: 30px;
+
+}
+.welcome-a{
+  color:blue;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+.welcome-b{
+  color:rgb(9, 94, 16);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
 
 

@@ -3,7 +3,7 @@ import './App.css';
 import {BrowserRouter as Router,Route, Switch} from 'react-router-dom';
 import Calculator from './components/Calculator'
 import Weather from './components/Weather'
-import Calendar from './components/Calendar'
+import Welcome from './components/Welcome'
 import UnitCategoryContainer from './containers/UnitCategoryContainer'
 import {findWeather} from './action/Tool'
 import {connect} from 'react-redux'
@@ -23,10 +23,10 @@ function App() {
                 
                     <Switch>
                     <Route exact path='/' ><span className="touch-here"><p>Touch or Hover</p> <p>on</p><p>Here</p><p>To Start</p> </span></Route>
-                        <Route path='/home' >Welcome to Mr. Gadget</Route>
+                        <Route path='/home' render={()=> (<Welcome />)}></Route>
                         <Route path='/calculator' render={()=>(<Calculator />)}></Route>
                         <Route path='/weather' render={()=>(<Weather />)}></Route>
-                        <Route path='/calendar' render={()=>(<Calendar />)}>Calendar</Route>
+                        
                         <Route path='/units' render={()=>(<UnitCategoryContainer />)}></Route>
                         
                     </Switch>

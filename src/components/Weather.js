@@ -14,16 +14,16 @@ class Weather extends Component{
         }
         }
 
-
+                // handleChange will detect the change in value that is put in from the form
                 handleChange = event =>{this.setState({[event.target.name]: event.target.value})}
 
-
+                //handleSubmit inserts given zipcode to findWeather function that takes the zip code to reducer.
                 handleSubmit = event =>{
                    event.preventDefault()
                    this.props.findWeather(this.state.city)
                    this.setState({city: ''})
                  }
-
+                // this function will convert given degree to Compass expression
                    degToCompass(num) {
                         var val = Math.floor((num / 22.5) + 0.5);
                         var arr = ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"];
@@ -35,9 +35,10 @@ class Weather extends Component{
         let newDate = new Date()
        const{myweather} = this.props
         if(this.props.myweather.name){
-          
+          //next two lines convert temperature out put in Fathrenheit to display for max and min
              let minTemp = Math.floor((9/5) *(this.props.myweather.main.temp_min - 273) + 32)
              let maxTemp = Math.floor((9/5) *(this.props.myweather.main.temp_max - 273) + 32)
+             //next line will convert wind speed to miles per hour.
              let theSpeed = Math.floor((3.6/1.609) * (this.props.myweather.wind.speed))
          
 
