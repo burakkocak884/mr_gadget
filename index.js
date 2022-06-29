@@ -47,5 +47,5 @@ app.get('/weather', (req, res) => {
 
 
 
-app.listen(8000, ()=> console.log('server is running on port', {PORT}))
+app.listen(8000, ()=> console.log('Server is running on port : ', {PORT}))
 
