@@ -3,8 +3,9 @@
 export default function manageTool(state = {myweather: '', calcInput: ''
     }, action) {
   switch (action.type) {
+
      case 'FOUND_INFO':
-       return {myweather: action.foundInfo};
+       return {myweather: action.foundInfo.data};
 
      case 'CALC_INPUT':
         let theString = action.input

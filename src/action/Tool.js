@@ -1,17 +1,26 @@
 
+import { dispatch } from "rxjs/internal/observable/pairs";
+
+const axios = require('axios');
 
 // findWeather function will fecth the data from external API with given zipCode
     export const findWeather = zipCode => {
-          const API_KEY = process.env.REACT_APP_WEATHER_API_KEY
-          debugger;
-          const url = `http://api.openweathermap.org/data/2.5/weather?zip=${zipCode}&appid=${API_KEY}`
-        return (dispatch) => {
-            return fetch(url)
-              .then(response => response.json())
-              .then(foundInfo =>  {
+
+          const getWeatherInfo = {
+            method: 'GET',
+            url: 'http://localhost:8000/weather',
+            params: {postalCode: zipCode}
+          }
+
+          return (dispatch)=>{
+            return axios.request(getWeatherInfo)
+            .then((foundInfo) =>{ 
               dispatch({ type: 'FOUND_INFO', foundInfo})
-              });
-    }}
+            })
+            .catch((error) => {console.log('error caught : ', error) })
+          } 
+         
+  }
 
     export const calcInput = (input) =>{
           return{

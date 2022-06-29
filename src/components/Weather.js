@@ -15,7 +15,10 @@ class Weather extends Component{
         }
 
                 // handleChange will detect the change in value that is put in from the form
-                handleChange = event =>{this.setState({[event.target.name]: event.target.value})}
+                handleChange = event =>{
+                    
+                    this.setState({city: event.target.value}
+                        )}
 
                 //handleSubmit inserts given zipcode to findWeather function that takes the zip code to reducer.
                 handleSubmit = event =>{
@@ -45,7 +48,7 @@ class Weather extends Component{
         return(
             <div className='weather-form'>
                 <p className='tool-headline'>Weather Info</p>
-                <p>Time: <span className='weather-data'>{newDate.getHours()}:{newDate.getMinutes()}:{newDate.getSeconds()}</span></p>
+                <p>Time: <span className='weather-data'>{newDate.getHours()}:{newDate.getMinutes()}</span></p>
                 <p><b><span className='weather-data'>{myweather.name}</span></b> in <span className='weather-data'>{myweather.sys.country}</span></p>
                 <p>Forecast shows <span className='weather-data'>{myweather.weather[0].description}</span> at <span className='weather-data'>{Math.floor((minTemp + maxTemp)/2)}</span> F</p>
                 <p>Wind Speed: ~<span className='weather-data'>{theSpeed}</span> mph <span className='weather-data'>{this.degToCompass(this.props.myweather.wind.deg)}</span></p>
