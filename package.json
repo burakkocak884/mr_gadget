@@ -21,7 +21,7 @@
     "semantic-ui-react": "^0.88.1"
   },
   "scripts": {
-    "start:backend": "npm install && nodemon index.js",
+    "start:backend": "nodemon index.js",
     "start:frontend": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
