@@ -27,7 +27,7 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-require('dotenv').config()
+//require('dotenv').config()
 //dotenv commentedout due to an error
 
 // If you want your app to work offline and load faster, you can change
