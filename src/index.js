@@ -27,7 +27,13 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-//require('dotenv').config()
+// require('dotenv').config()
+
+// module.exports = {
+//   env: {
+//     REACT_APP_WEATHER_API_KEY = env.REACT_APP_WEATHER_API_KEY,
+//   }
+// }
 //dotenv commentedout due to an error
 
 // If you want your app to work offline and load faster, you can change
