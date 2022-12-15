@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {Form, Button, Input} from 'semantic-ui-react'
+import {Form} from 'semantic-ui-react'
 
 class UnitCategoryContainer extends Component {
     constructor(props){

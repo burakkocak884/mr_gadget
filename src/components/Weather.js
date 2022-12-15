@@ -96,10 +96,8 @@ class Weather extends Component{
     }
 }
 const mapStateToProps = state =>{
-    console.log('my state in weather',state)
     return{
         myweather: state.myweather
-
     }
 }
 export default connect(mapStateToProps,{findWeather})(Weather)

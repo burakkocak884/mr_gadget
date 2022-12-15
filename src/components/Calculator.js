@@ -17,8 +17,7 @@ import {calcInput} from '../action/Tool'
 
 
                 handleChange = event =>{
-                    //console.log('valid value =',event.target.value)
-                    //debugger
+                   
                     this.setState({ placeHolder: this.state.placeHolder + event.target.value})
                 }
 
@@ -31,7 +30,6 @@ import {calcInput} from '../action/Tool'
                 handleDelete = event =>{
                     let theString = this.state.placeHolder
                     this.setState({placeHolder: theString.slice(0,theString.length-1) })
-                // console.log('the state=',this.state)
                 }
 
                 //handleSubmit will insert given value from the form to be sent to reducer
